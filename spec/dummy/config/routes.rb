@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Refinerycms::Markdown::Engine => "/refinerycms-markdown"
+  mount Refinery::Core::Engine, :at => Refinery::Core.mounted_path
 end
