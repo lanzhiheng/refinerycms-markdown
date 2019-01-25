@@ -16,6 +16,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
+  gem 'selenium-webdriver'
 end
 
 # Declare any dependencies that are still in development here instead of in
