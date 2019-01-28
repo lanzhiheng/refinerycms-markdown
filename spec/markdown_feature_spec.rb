@@ -26,8 +26,9 @@ RSpec.describe 'markdown', :type => :feature do
   scenario 'load markdown resource', js: true do
     visit refinery.edit_admin_page_path(about_page)
 
-    expect(page.body).to match('easymde.*.js')
     expect(page.body).to match('easymde.*.css')
+    expect(page.body).to match('preview.*.css')
+    expect(page.body).to match('easymde.*.js')
     expect(page.body).to match('init_editor.*.js')
   end
 

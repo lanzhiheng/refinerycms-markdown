@@ -9,13 +9,14 @@ module Refinerycms
       config.to_prepare do
         Rails.application.config.assets.precompile += %w(
           refinerycms/easymde.css
+          refinerycms/preview.scss
           refinerycms/easymde.js
           refinerycms/init_editor.coffee
         )
       end
 
       after_inclusion do
-        %w(refinerycms/easymde).each do |stylesheet|
+        %w(refinerycms/easymde refinerycms/preview).each do |stylesheet|
           Refinery::Core.config.register_visual_editor_stylesheet stylesheet
         end
 
